@@ -1,20 +1,15 @@
 package com.example.util;
 
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.JwtException;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.stereotype.Component;
 
-import javax.crypto.SecretKey;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import javax.crypto.SecretKey;
 
-@Component
 public class JwtUtil {
     private static final String SECRET_KEY = "i_love_you30000000000000000000000000000000000";
     private static final long EXPIRATION_TIME = 86400000; // 1 day in milliseconds
